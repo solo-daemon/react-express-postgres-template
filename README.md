@@ -11,3 +11,13 @@ docker compose up
 ```
 
 Your app is up and running now focus on coding and enjoy the hot-reloading !!!.
+
+PS : had a lot of trouble with this
+To connect from terminal to the database for default setup run
+```
+psql -h localhost -p 8000 -U user db
+```
+
+If you not put the database name db here it will try to connect you to the user database.
+
+Also if you want to change the .env settings of database you will have to delete the volume pg_data otherwise the changes will not be reflected in the database server.
